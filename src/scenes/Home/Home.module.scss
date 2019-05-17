@@ -1,0 +1,19 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+      circle at top left,
+      yellow,
+      #f06d06,
+      60%,
+      transparent
+    ),
+    radial-gradient(circle at bottom left, #4eaf36, #479b74);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

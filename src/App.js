@@ -9,6 +9,7 @@ import Board5 from './scenes/Board5';
 import Board6 from './scenes/Board6';
 import Board7 from './scenes/Board7';
 import Board8 from './scenes/Board8';
+import Board9 from './scenes/Board9';
 
 import './App.scss';
 
@@ -43,6 +44,8 @@ const App = () => {
         return <Board7 next={next} previous={previous} />;
       case 9:
         return <Board8 next={next} previous={previous} />;
+      case 10:
+        return <Board9 next={next} previous={previous} />;
       default:
         return <Cover next={next} />;
     }

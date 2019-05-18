@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 
 import Cover from './scenes/Cover';
+import Board1 from './scenes/Board1/Board1';
 
-import './App.css';
+import './App.scss';
 
 const App = () => {
   const [step, setStep] = useState(1);
@@ -19,6 +20,8 @@ const App = () => {
     switch (step) {
       case 1:
         return <Cover next={next} />;
+      case 2:
+        return <Board1 next={next} previous={previous} />;
       default:
         return <Cover next={next} />;
     }

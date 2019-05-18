@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter / 2;
+  margin-right: -$gutter / 2;
+}
+
+.col {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+}
+
+@media only screen and (min-width: 992px) {
+  .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}

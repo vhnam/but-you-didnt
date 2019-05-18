@@ -12,6 +12,7 @@ import Board8 from './scenes/Board8';
 import Board9 from './scenes/Board9';
 import Board10 from './scenes/Board10';
 import Origin from './scenes/Origin';
+import Reference from './scenes/Reference';
 
 import './App.scss';
 
@@ -52,6 +53,8 @@ const App = () => {
         return <Board10 next={next} previous={previous} />;
       case 12:
         return <Origin next={next} previous={previous} />;
+      case 13:
+        return <Reference next={next} previous={previous} />;
       default:
         return <Cover next={next} />;
     }

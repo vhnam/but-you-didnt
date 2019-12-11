@@ -19,7 +19,12 @@ const Board6 = ({next, previous}) => {
           </div>
         </div>
         <div className="col">
-          <div className={storyStyles.imageContainer}>
+          <div
+            className={clsx(
+              storyStyles.imageContainer,
+              storyStyles.coloredBackground,
+            )}
+          >
             <img src={imgBoard15} alt="15" className={storyStyles.image} />
           </div>
         </div>

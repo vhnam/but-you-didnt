@@ -14,7 +14,12 @@ const Board6 = ({next, previous}) => {
     <div className={storyStyles.storyContainer}>
       <div className="row">
         <div className="col">
-          <div className={storyStyles.imageContainer}>
+          <div
+            className={clsx(
+              storyStyles.imageContainer,
+              storyStyles.coloredBackground,
+            )}
+          >
             <img src={imgBoard14} alt="14" className={storyStyles.image} />
           </div>
         </div>

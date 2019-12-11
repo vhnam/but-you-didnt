@@ -6,7 +6,7 @@ import Typography, {
   TypoWeight,
 } from '../../components/Typography';
 
-import imgChevronRight from '../../assets/images/ic_chevron_right.svg';
+import {IcoNext} from '../../components/Icons';
 
 import styles from './Cover.module.scss';
 
@@ -31,7 +31,7 @@ const Cover = ({next}) => {
           </Typography>
         </div>
         <div className={styles.nextContainer} onClick={next}>
-          <img className={styles.nextButton} src={imgChevronRight} alt="Next" />
+          <IcoNext className={styles.nextButton} />
         </div>
       </div>
     </div>

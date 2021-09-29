@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "clsx": "^1.0.4",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "npm": "^6.13.3",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

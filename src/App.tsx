@@ -1,12 +1,11 @@
-import '@/App.scss';
 import React, { useState } from 'react';
-
-import { boardData } from '@/config/boardData.ts';
 
 import Board from '@/scenes/Board';
 import Cover from '@/scenes/Cover';
 import Origin from '@/scenes/Origin';
 import Reference from '@/scenes/Reference';
+
+import { boardData } from './config/boardData.ts';
 
 const App: React.FC = () => {
   const [step, setStep] = useState<number>(1);

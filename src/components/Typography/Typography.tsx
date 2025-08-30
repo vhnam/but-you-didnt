@@ -1,7 +1,6 @@
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 
-import styles from './Typography.module.scss';
 import { TypoVariant, TypoVariants, TypoWeight, TypoWeightType } from './types';
 
 interface TypographyProps {
@@ -21,40 +20,32 @@ const Typography = ({
   children,
   ...others
 }: TypographyProps) => {
+  const variantClasses = {
+    [TypoVariants.h1]: 'font-sans fluid-h1',
+    [TypoVariants.h2]: 'font-sans fluid-h2',
+    [TypoVariants.h3]: 'font-sans fluid-h3',
+    [TypoVariants.h4]: 'font-sans text-lg',
+    [TypoVariants.h5]: 'font-sans text-base',
+    [TypoVariants.body]: 'font-sans text-base',
+    [TypoVariants.button]: 'font-sans text-sm',
+  } as const;
+
   const getVariant = (variant?: TypoVariant): string => {
-    switch (variant) {
-      case TypoVariants.h1:
-        return styles.h1;
-      case TypoVariants.h2:
-        return styles.h2;
-      case TypoVariants.h3:
-        return styles.h3;
-      case TypoVariants.h4:
-        return styles.h4;
-      case TypoVariants.h5:
-        return styles.h5;
-      case TypoVariants.body:
-        return styles.body;
-      case TypoVariants.button:
-        return styles.button;
-      default:
-        return styles.body;
-    }
+    return (
+      variantClasses[variant as keyof typeof variantClasses] ||
+      'font-sans text-base'
+    );
   };
 
+  const weightClasses = {
+    [TypoWeight.light]: 'font-light',
+    [TypoWeight.regular]: 'font-normal',
+    [TypoWeight.medium]: 'font-medium',
+    [TypoWeight.semibold]: 'font-semibold',
+  } as const;
+
   const getWeight = (weight?: TypoWeightType): string => {
-    switch (weight) {
-      case TypoWeight.light:
-        return styles.light;
-      case TypoWeight.regular:
-        return styles.regular;
-      case TypoWeight.medium:
-        return styles.medium;
-      case TypoWeight.semibold:
-        return styles.semibold;
-      default:
-        return styles.regular;
-    }
+    return weightClasses[weight as keyof typeof weightClasses] || 'font-normal';
   };
 
   return React.createElement(

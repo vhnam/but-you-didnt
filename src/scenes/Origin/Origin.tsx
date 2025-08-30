@@ -3,10 +3,7 @@ import React from 'react';
 import { IcoNext, IcoPrevious } from '@/components/Icons';
 import Typography, { TypoWeight } from '@/components/Typography';
 
-import styles from './Origin.module.scss';
-
 import imgOrigin from '@/assets/images/story/17.jpg';
-import storyStyles from '@/assets/scss/story.module.scss';
 
 interface OriginProps {
   next: () => void;
@@ -15,11 +12,11 @@ interface OriginProps {
 
 const Origin: React.FC<OriginProps> = ({ next, previous }) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
+    <div className="flex justify-center items-center h-screen bg-white md:w-screen">
+      <div className="max-w-2xl mx-auto">
         <Typography
           tag="p"
-          className={styles.description}
+          className="px-4 mb-6 text-xl md:mb-12"
           weight={TypoWeight.light}
         >
           A common American family, mother and daughter lived together. Father
@@ -28,18 +25,20 @@ const Origin: React.FC<OriginProps> = ({ next, previous }) => {
           she died, her daughter found a letter in her mother's things which the
           poem above "But you didn't"!
         </Typography>
-        <img
-          className={styles.image}
-          src={imgOrigin}
-          alt="The Origin of the Poem"
-        />
+        <img className="w-full" src={imgOrigin} alt="The Origin of the Poem" />
       </div>
 
-      <div className={storyStyles.controls}>
-        <div className={storyStyles.previousButton} onClick={previous}>
+      <div className="absolute left-4 right-4 bottom-12 z-50 lg:left-12 lg:right-12">
+        <div
+          className="float-left text-gray-600 opacity-80 transition-opacity duration-100 ease-out hover:text-gray-800 hover:opacity-100 hover:cursor-pointer"
+          onClick={previous}
+        >
           <IcoPrevious />
         </div>
-        <div className={storyStyles.nextButton} onClick={next}>
+        <div
+          className="float-right text-gray-600 opacity-80 transition-opacity duration-100 ease-out hover:text-gray-800 hover:opacity-100 hover:cursor-pointer"
+          onClick={next}
+        >
           <IcoNext />
         </div>
       </div>

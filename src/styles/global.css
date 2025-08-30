@@ -1,0 +1,115 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Public Sans', sans-serif;
+
+  --animation-fadein: fadein 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Custom colors for board gradients */
+  --color-board7-start: #ff302e;
+  --color-board7-end: #ef6632;
+  --color-board8-start: #223c3d;
+  --color-board8-end: #1c3934;
+  --color-board9-start: #ffbf6f;
+  --color-board9-end: #d4bf86;
+
+  /* Breakpoints to match existing SCSS */
+  --breakpoint-lg: 992px;
+
+  /* Fluid typography scale */
+  --fluid-h1-min: 27.99px; /* 1.2^4 * 16px */
+  --fluid-h1-max: 54px; /* 1.5^3 * 16px */
+  --fluid-h2-min: 23.33px; /* 1.2^3 * 16px */
+  --fluid-h2-max: 54px; /* 1.5^3 * 16px */
+  --fluid-h3-min: 19.44px; /* 1.2^2 * 16px */
+  --fluid-h3-max: 36px; /* 1.5^2 * 16px */
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shaking {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1rem);
+  }
+}
+
+/* Board gradient backgrounds */
+.board7 {
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    var(--color-board7-start) 0%,
+    var(--color-board7-end) 100%
+  );
+}
+
+.board8 {
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    var(--color-board8-start) 0%,
+    var(--color-board8-end) 100%
+  );
+}
+
+.board9 {
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    var(--color-board9-start) 0%,
+    var(--color-board9-end) 100%
+  );
+}
+
+/* Fluid typography */
+.fluid-h1 {
+  font-size: var(--fluid-h1-min);
+}
+
+.fluid-h2 {
+  font-size: var(--fluid-h2-min);
+}
+
+.fluid-h3 {
+  font-size: var(--fluid-h3-min);
+}
+
+@media screen and (min-width: 320px) {
+  .fluid-h1 {
+    font-size: calc(
+      var(--fluid-h1-min) + (54 - 27.99) * ((100vw - 320px) / (1200 - 320))
+    );
+  }
+  .fluid-h2 {
+    font-size: calc(
+      var(--fluid-h2-min) + (54 - 23.33) * ((100vw - 320px) / (1200 - 320))
+    );
+  }
+  .fluid-h3 {
+    font-size: calc(
+      var(--fluid-h3-min) + (36 - 19.44) * ((100vw - 320px) / (1200 - 320))
+    );
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .fluid-h1 {
+    font-size: var(--fluid-h1-max);
+  }
+  .fluid-h2 {
+    font-size: var(--fluid-h2-max);
+  }
+  .fluid-h3 {
+    font-size: var(--fluid-h3-max);
+  }
+}

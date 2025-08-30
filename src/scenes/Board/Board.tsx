@@ -4,12 +4,9 @@ import React, { useState } from 'react';
 import { IcoNext, IcoPrevious } from '@/components/Icons';
 import Typography, { TypoWeight } from '@/components/Typography';
 
-import boardStyles from './Board.module.scss';
 import { BoardProps } from './types';
 
-import storyStyles from '@/assets/scss/story.module.scss';
-
-const Board = ({ data, next, previous }:BoardProps) => {
+const Board = ({ data, next, previous }: BoardProps) => {
   const [step, setStep] = useState<number>(1);
   const totalSteps = data.steps.length;
 
@@ -31,9 +28,9 @@ const Board = ({ data, next, previous }:BoardProps) => {
 
   const renderQuote = (stepIndex: number, content: string) => (
     <Typography
-      className={clsx(storyStyles.quote, {
-        [storyStyles.visible]: step === stepIndex + 1,
-        [storyStyles.hidden]: step !== stepIndex + 1,
+      className={clsx('max-w-2xl mx-auto text-xl', {
+        'block animate-fadein': step === stepIndex + 1,
+        hidden: step !== stepIndex + 1,
       })}
       weight={TypoWeight.light}
     >
@@ -45,9 +42,9 @@ const Board = ({ data, next, previous }:BoardProps) => {
     <img
       src={image}
       alt={alt}
-      className={clsx(storyStyles.image, {
-        [storyStyles.visible]: step === stepIndex + 1,
-        [storyStyles.hidden]: step !== stepIndex + 1,
+      className={clsx('max-w-80%', {
+        'block animate-fadein': step === stepIndex + 1,
+        hidden: step !== stepIndex + 1,
       })}
     />
   );
@@ -55,10 +52,10 @@ const Board = ({ data, next, previous }:BoardProps) => {
   const renderQuoteContainer = () => (
     <div
       className={clsx(
-        storyStyles.quoteContainer,
-        data.customStyles?.quoteContainer === 'board7' && boardStyles.board7,
-        data.customStyles?.quoteContainer === 'board8' && boardStyles.board8,
-        data.customStyles?.quoteContainer === 'board9' && boardStyles.board9
+        'fixed top-0 left-0 right-0 z-10 flex flex-col items-center justify-center h-screen w-full px-8 pt-96 text-center md:px-20 md:pt-160 lg:static lg:px-6 lg:pt-0',
+        data.customStyles?.quoteContainer === 'board7' && 'board7',
+        data.customStyles?.quoteContainer === 'board8' && 'board8',
+        data.customStyles?.quoteContainer === 'board9' && 'board9'
       )}
     >
       {data.steps.map((stepData, index) => renderQuote(index, stepData.quote))}
@@ -68,9 +65,11 @@ const Board = ({ data, next, previous }:BoardProps) => {
   const renderImageContainer = () => (
     <div
       className={clsx(
-        storyStyles.imageContainer,
-        data.customStyles?.imageContainer === 'coloredBackground' &&
-          storyStyles.coloredBackground
+        'flex items-start justify-center w-full h-screen px-8 pt-20 bg-gray-200 md:px-20 lg:items-center lg:px-6',
+        {
+          'absolute bg-transparent z-10':
+            data.customStyles?.imageContainer === 'coloredBackground',
+        }
       )}
     >
       {data.steps.map((stepData, index) =>
@@ -80,23 +79,35 @@ const Board = ({ data, next, previous }:BoardProps) => {
   );
 
   const renderSingleLayout = () => (
-    <div className="row">
-      <div className="col">{renderImageContainer()}</div>
-      <div className="col">{renderQuoteContainer()}</div>
+    <div className="flex flex-wrap">
+      <div className="relative w-full lg:w-1/2 lg:max-w-1/2">
+        {renderImageContainer()}
+      </div>
+      <div className="relative w-full lg:w-1/2 lg:max-w-1/2">
+        {renderQuoteContainer()}
+      </div>
     </div>
   );
 
   const renderQuoteFirstLayout = () => (
-    <div className="row">
-      <div className="col">{renderQuoteContainer()}</div>
-      <div className="col">{renderImageContainer()}</div>
+    <div className="flex flex-wrap">
+      <div className="relative w-full lg:w-1/2 lg:max-w-1/2">
+        {renderQuoteContainer()}
+      </div>
+      <div className="relative w-full lg:w-1/2 lg:max-w-1/2">
+        {renderImageContainer()}
+      </div>
     </div>
   );
 
   const renderImageFirstLayout = () => (
-    <div className="row">
-      <div className="col">{renderImageContainer()}</div>
-      <div className="col">{renderQuoteContainer()}</div>
+    <div className="flex flex-wrap">
+      <div className="relative w-full lg:w-1/2 lg:max-w-1/2">
+        {renderImageContainer()}
+      </div>
+      <div className="relative w-full lg:w-1/2 lg:max-w-1/2">
+        {renderQuoteContainer()}
+      </div>
     </div>
   );
 
@@ -114,14 +125,20 @@ const Board = ({ data, next, previous }:BoardProps) => {
   };
 
   return (
-    <div className={storyStyles.storyContainer}>
+    <div>
       {renderLayout()}
 
-      <div className={storyStyles.controls}>
-        <div className={storyStyles.previousButton} onClick={handlePrevious}>
+      <div className="absolute left-4 right-4 bottom-12 z-50 lg:left-12 lg:right-12">
+        <div
+          className="float-left text-gray-600 opacity-80 transition-opacity duration-100 ease-out hover:text-gray-800 hover:opacity-100 hover:cursor-pointer"
+          onClick={handlePrevious}
+        >
           <IcoPrevious />
         </div>
-        <div className={storyStyles.nextButton} onClick={handleNext}>
+        <div
+          className="float-right text-gray-600 opacity-80 transition-opacity duration-100 ease-out hover:text-gray-800 hover:opacity-100 hover:cursor-pointer"
+          onClick={handleNext}
+        >
           <IcoNext />
         </div>
       </div>

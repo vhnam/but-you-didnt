@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@fontsource/public-sans": "^5.2.6",
     "clsx": "^1.0.4",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
@@ -14,8 +15,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.2",
     "sass": "^1.70.0",
+    "typescript": "^5.9.2",
     "vite": "^5.0.12"
   },
   "browserslist": {

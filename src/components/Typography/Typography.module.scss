@@ -1,56 +1,6 @@
 @import '../../assets//scss/mixin.scss';
 @import '../../assets/scss/variables.scss';
 
-// Typeface
-
-@font-face {
-  font-family: 'Public Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Public Sans'), local('PublicSans'),
-    url('../../assets/fonts/public-sans/PublicSans-Light.woff2') format('woff2'),
-    url('../../assets/fonts/public-sans/PublicSans-Light.woff') format('woff'),
-    url('../../assets/fonts/public-sans/PublicSans-Light.ttf')
-      format('truetype');
-}
-
-@font-face {
-  font-family: 'Public Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Public Sans'), local('PublicSans'),
-    url('../../assets/fonts/public-sans/PublicSans-Regular.woff2')
-      format('woff2'),
-    url('../../assets/fonts/public-sans/PublicSans-Regular.woff') format('woff'),
-    url('../../assets/fonts/public-sans/PublicSans-Regular.ttf')
-      format('truetype');
-}
-
-@font-face {
-  font-family: 'Public Sans';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Public Sans'), local('PublicSans'),
-    url('../../assets/fonts/public-sans/PublicSans-Medium.woff2')
-      format('woff2'),
-    url('../../assets/fonts/public-sans/PublicSans-Medium.woff') format('woff'),
-    url('../../assets/fonts/public-sans/PublicSans-Medium.ttf')
-      format('truetype');
-}
-
-@font-face {
-  font-family: 'Public Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Public Sans'), local('PublicSans'),
-    url('../../assets/fonts/public-sans/PublicSans-SemiBold.woff2')
-      format('woff2'),
-    url('../../assets/fonts/public-sans/PublicSans-SemiBold.woff')
-      format('woff'),
-    url('../../assets/fonts/public-sans/PublicSans-SemiBold.ttf')
-      format('truetype');
-}
-
 // Common
 
 .h1,

@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-import imgBoard10 from '../../assets/images/story/10.jpg';
-import imgBoard11 from '../../assets/images/story/11.jpg';
+import imgBoard6 from '../../assets/images/story/6.jpg';
+import imgBoard7 from '../../assets/images/story/7.jpg';
 
 import Typography, {TypoWeight} from '../../components/Typography';
 import {IcoNext, IcoPrevious} from '../../components/Icons';
 
 import storyStyles from '../../assets/scss/story.module.scss';
 
-const Board5 = ({next, previous}) => {
+const Board3 = ({next, previous}) => {
   const [step, setStep] = useState(1);
 
   const handleNext = () => {
@@ -41,8 +40,8 @@ const Board5 = ({next, previous}) => {
               })}
               weight={TypoWeight.light}
             >
-              And remember the time I forgot to tell you the dance was formal
-              and you showed up in jeans?
+              Do you remember the time I flirted with all the guys to make you
+              jealous, and you were?
             </Typography>
             <Typography
               className={clsx(storyStyles.quote, {
@@ -51,23 +50,23 @@ const Board5 = ({next, previous}) => {
               })}
               weight={TypoWeight.light}
             >
-              I thought you'd drop me, but you didn't.
+              I thought you'd leave, but you didn't.
             </Typography>
           </div>
         </div>
         <div className="col">
           <div className={storyStyles.imageContainer}>
             <img
-              src={imgBoard10}
-              alt="10"
+              src={imgBoard6}
+              alt="6"
               className={clsx(storyStyles.image, {
                 [storyStyles.visible]: step === 1,
                 [storyStyles.hidden]: step === 2,
               })}
             />
             <img
-              src={imgBoard11}
-              alt="11"
+              src={imgBoard7}
+              alt="7"
               className={clsx(storyStyles.image, {
                 [storyStyles.visible]: step === 2,
                 [storyStyles.hidden]: step === 1,
@@ -89,9 +88,6 @@ const Board5 = ({next, previous}) => {
   );
 };
 
-Board5.propTypes = {
-  next: PropTypes.func.isRequired,
-  previous: PropTypes.func.isRequired,
-};
 
-export default Board5;
+
+export default Board3;

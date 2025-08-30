@@ -1,1 +1,1 @@
-export {default} from './Board4';
+export {default} from './Board4.jsx';

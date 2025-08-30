@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Typography, {
   TypoVariants,
@@ -36,10 +35,6 @@ const Cover = ({next}) => {
       </div>
     </div>
   );
-};
-
-Cover.propTypes = {
-  next: PropTypes.func.isRequired,
 };
 
 export default Cover;

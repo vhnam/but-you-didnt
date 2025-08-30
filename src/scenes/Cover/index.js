@@ -1,1 +1,1 @@
-export {default} from './Cover';
+export {default} from './Cover.jsx';

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import {IcoNext, IcoPrevious} from '../../components/Icons';
 import Typography, {TypoWeight} from '../../components/Typography';
@@ -43,9 +42,5 @@ const Origin = ({next, previous}) => {
   );
 };
 
-Origin.propTypes = {
-  next: PropTypes.func.isRequired,
-  previous: PropTypes.func.isRequired,
-};
 
 export default Origin;

@@ -1,5 +1,4 @@
 import {createElement} from 'react';
-import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import {TypoVariants, TypoWeight} from './types';
@@ -51,14 +50,6 @@ const Typography = ({tag, variant, weight, className, children, ...others}) => {
     },
     children,
   );
-};
-
-Typography.propTypes = {
-  tag: PropTypes.string,
-  variant: PropTypes.string,
-  weight: PropTypes.string,
-  className: PropTypes.string,
-  children: PropTypes.node.isRequired,
 };
 
 Typography.defaultProps = {

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import imgBoard15 from '../../assets/images/story/15.jpg';
@@ -9,7 +8,7 @@ import {IcoNext, IcoPrevious} from '../../components/Icons';
 import storyStyles from '../../assets/scss/story.module.scss';
 import styles from './Board9.module.scss';
 
-const Board6 = ({next, previous}) => {
+const Board9 = ({next, previous}) => {
   return (
     <div className={storyStyles.storyContainer}>
       <div className="row">
@@ -42,9 +41,6 @@ const Board6 = ({next, previous}) => {
   );
 };
 
-Board6.propTypes = {
-  next: PropTypes.func.isRequired,
-  previous: PropTypes.func.isRequired,
-};
 
-export default Board6;
+
+export default Board9;

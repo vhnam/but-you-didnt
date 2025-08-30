@@ -1,1 +1,1 @@
-export {default} from './Board2';
+export {default} from './Board2.jsx';

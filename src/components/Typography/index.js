@@ -1,2 +1,2 @@
-export * from './types';
-export {default} from './Typography';
+export * from './types.js';
+export {default} from './Typography.js';

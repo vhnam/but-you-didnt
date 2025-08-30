@@ -1,1 +1,1 @@
-export {default} from './Origin';
+export {default} from './Origin.jsx';

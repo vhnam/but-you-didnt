@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import imgBoard4 from '../../assets/images/story/4.jpg';
@@ -89,9 +88,6 @@ const Board2 = ({next, previous}) => {
   );
 };
 
-Board2.propTypes = {
-  next: PropTypes.func.isRequired,
-  previous: PropTypes.func.isRequired,
-};
+
 
 export default Board2;

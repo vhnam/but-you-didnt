@@ -1,1 +1,1 @@
-export {default} from './Reference';
+export {default} from './Reference.jsx';

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import imgBoard16 from '../../assets/images/story/16.jpg';
@@ -10,7 +9,7 @@ import Typography, {TypoWeight} from '../../components/Typography';
 import storyStyles from '../../assets/scss/story.module.scss';
 import styles from './Board10.module.scss';
 
-const Board6 = ({next, previous}) => {
+const Board10 = ({next, previous}) => {
   return (
     <div className={storyStyles.storyContainer}>
       <div className="row">
@@ -40,9 +39,6 @@ const Board6 = ({next, previous}) => {
   );
 };
 
-Board6.propTypes = {
-  next: PropTypes.func.isRequired,
-  previous: PropTypes.func.isRequired,
-};
 
-export default Board6;
+
+export default Board10;

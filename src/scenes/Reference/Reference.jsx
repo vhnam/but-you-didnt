@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import {IcoPrevious} from '../../components/Icons';
 import Typography, {
@@ -52,8 +51,5 @@ const Reference = ({previous}) => {
   );
 };
 
-Reference.propTypes = {
-  previous: PropTypes.func.isRequired,
-};
 
 export default Reference;

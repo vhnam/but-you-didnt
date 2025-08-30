@@ -16,5 +16,5 @@ export const TypoWeight = {
   semibold: 'semibold',
 } as const;
 
-export type TypoVariant = typeof TypoVariants[keyof typeof TypoVariants];
-export type TypoWeightType = typeof TypoWeight[keyof typeof TypoWeight];
+export type TypoVariant = (typeof TypoVariants)[keyof typeof TypoVariants];
+export type TypoWeightType = (typeof TypoWeight)[keyof typeof TypoWeight];

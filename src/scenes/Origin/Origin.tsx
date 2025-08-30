@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { IcoNext, IcoPrevious } from '../../components/Icons';
-import Typography, { TypoWeight } from '../../components/Typography';
+import { IcoNext, IcoPrevious } from '@/components/Icons';
+import Typography, { TypoWeight } from '@/components/Typography';
 
-import imgOrigin from '../../assets/images/story/17.jpg';
-
-import storyStyles from '../../assets/scss/story.module.scss';
 import styles from './Origin.module.scss';
+
+import imgOrigin from '@/assets/images/story/17.jpg';
+import storyStyles from '@/assets/scss/story.module.scss';
 
 interface OriginProps {
   next: () => void;

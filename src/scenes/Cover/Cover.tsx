@@ -1,11 +1,7 @@
 import React from 'react';
 
-import Typography, {
-  TypoVariants,
-  TypoWeight,
-} from '../../components/Typography';
-
-import { IcoNext } from '../../components/Icons';
+import { IcoNext } from '@/components/Icons';
+import Typography, { TypoVariants, TypoWeight } from '@/components/Typography';
 
 import styles from './Cover.module.scss';
 

@@ -1,10 +1,8 @@
-import React, {ReactNode} from 'react';
-
 import clsx from 'clsx';
-
-import {TypoVariants, TypoWeight, TypoVariant, TypoWeightType} from './types';
+import React, { ReactNode } from 'react';
 
 import styles from './Typography.module.scss';
+import { TypoVariant, TypoVariants, TypoWeight, TypoWeightType } from './types';
 
 interface TypographyProps {
   tag?: string;
@@ -12,7 +10,7 @@ interface TypographyProps {
   weight?: TypoWeightType;
   className?: string;
   children: ReactNode;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const Typography = ({
@@ -60,12 +58,12 @@ const Typography = ({
   };
 
   return React.createElement(
-    tag as any,
+    tag as string,
     {
       ...others,
       className: clsx(className, getVariant(variant), getWeight(weight)),
     },
-    children,
+    children
   );
 };
 

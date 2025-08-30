@@ -1,13 +1,11 @@
 import React from 'react';
 
-import { IcoPrevious } from '../../components/Icons';
-import Typography, {
-  TypoWeight,
-  TypoVariants,
-} from '../../components/Typography';
+import { IcoPrevious } from '@/components/Icons';
+import Typography, { TypoVariants, TypoWeight } from '@/components/Typography';
 
-import storyStyles from '../../assets/scss/story.module.scss';
 import styles from './Reference.module.scss';
+
+import storyStyles from '@/assets/scss/story.module.scss';
 
 interface ReferenceProps {
   previous: () => void;

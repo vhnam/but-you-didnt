@@ -12,9 +12,3 @@ export interface BoardData {
     imageContainer?: string;
   };
 }
-
-export interface BoardProps {
-  data: BoardData;
-  next: () => void;
-  previous: () => void;
-}

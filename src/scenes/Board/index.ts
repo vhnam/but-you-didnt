@@ -1,2 +1,2 @@
 export { default } from './Board';
-export * from './types';
+export * from '../../types/board';

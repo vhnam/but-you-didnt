@@ -7,7 +7,7 @@ interface CoverProps {
   next: () => void;
 }
 
-const Cover: React.FC<CoverProps> = ({ next }) => {
+const Cover = ({ next }: CoverProps) => {
   return (
     <div
       className="relative w-screen h-screen bg-gradient-to-b from-yellow-300 via-orange-500 to-orange-600"

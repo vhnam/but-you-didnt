@@ -1,10 +1,16 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
 
+import { type BoardData } from '@/types/board';
+
 import { IcoNext, IcoPrevious } from '@/components/Icons';
 import Typography, { TypoWeight } from '@/components/Typography';
 
-import { BoardProps } from './types';
+export interface BoardProps {
+  data: BoardData;
+  next: () => void;
+  previous: () => void;
+}
 
 const Board = ({ data, next, previous }: BoardProps) => {
   const [step, setStep] = useState<number>(1);

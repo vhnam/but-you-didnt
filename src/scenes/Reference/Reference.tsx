@@ -7,7 +7,7 @@ interface ReferenceProps {
   previous: () => void;
 }
 
-const Reference: React.FC<ReferenceProps> = ({ previous }) => {
+const Reference = ({ previous }: ReferenceProps) => {
   return (
     <div className="flex justify-center items-center w-screen h-screen bg-gray-200">
       <div className="max-w-2xl mx-auto">

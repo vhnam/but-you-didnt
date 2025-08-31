@@ -10,7 +10,7 @@ interface OriginProps {
   previous: () => void;
 }
 
-const Origin: React.FC<OriginProps> = ({ next, previous }) => {
+const Origin = ({ next, previous }: OriginProps) => {
   return (
     <div className="flex justify-center items-center h-screen bg-white md:w-screen">
       <div className="max-w-2xl mx-auto">

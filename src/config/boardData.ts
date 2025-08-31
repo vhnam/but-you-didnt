@@ -1,4 +1,4 @@
-import { BoardData } from '@/scenes/Board/types';
+import { BoardData } from '@/types/board';
 
 import imgBoard2 from '@/assets/images/story/2.jpg';
 import imgBoard3 from '@/assets/images/story/3.jpg';

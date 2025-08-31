@@ -1,9 +1,6 @@
-// Import only the font weights we actually use
-import '@fontsource/public-sans/300.css';
-// light
-import '@fontsource/public-sans/400.css';
-// regular (default)
-import '@fontsource/public-sans/600.css';
+import '@fontsource/public-sans/latin-300.css';
+import '@fontsource/public-sans/latin-400.css';
+import '@fontsource/public-sans/latin-600.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 

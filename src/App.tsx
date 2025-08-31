@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
+import { boardData } from '@/config/boardData';
+
 import Board from '@/scenes/Board';
 import Cover from '@/scenes/Cover';
 import Origin from '@/scenes/Origin';
 import Reference from '@/scenes/Reference';
 
-import { boardData } from './config/boardData.ts';
-
-const App: React.FC = () => {
+const App = () => {
   const [step, setStep] = useState<number>(1);
 
   const next = (): void => {
